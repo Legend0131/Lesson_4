@@ -15,6 +15,33 @@ public class Main {
         b = in.nextDouble();
         c = in.nextDouble();
 
+        if(a == 0){
+            double x;
+            c = -c;
+            x = c/b;
+            if(b == 0){
+                if(c == 0){
+                    System.out.println("Корней уравнения бесконечно много");
+                    return;
+                }
+                System.out.println("Уравнение не имеет корней");
+            }
+            else {
+                System.out.println("Корней уравнения: 1 " + "Корень уравнения: " + x);
+            }
+            return;
+        }
+        else if(b == 0){
+            double x;
+            c = -c;
+            x = c/a;
+            if(x > 0) {
+                System.out.println("Корней уравнения: 1 " + "Корень уравнения: " + Math.sqrt(x));
+            }
+            else{System.out.println("Уравнение не имеет корней");}
+            return;
+        }
+
         double dscr;
         int koll;
         dscr = b*b - 4 * a * c;
